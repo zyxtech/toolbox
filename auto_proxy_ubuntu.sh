@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##sslocal for centos6
+##sslocal for UBUNTU
 ##will set http_proxy and https_proxy and proxy in /etc/yum.conf
 #input serverIP and server_port and password
 if [ ! -f "config.json" ];then
