@@ -1,0 +1,25 @@
+config:
+  salt-config:
+    master:
+      - ip1
+    master_host:
+      - master1
+  nodes:
+    - ip: ip1
+      ssh:
+        user: root
+        pass: ssh_password
+        port: 22
+      hostname: false
+    - ip: ip2
+      ssh:
+        user: root
+        pass: ssh_password
+        port: 22
+      hostname: node2
+    - ip: ip3
+      ssh:
+        user: root
+        pass: ssh_password
+        port: 22
+      hostname: node3
