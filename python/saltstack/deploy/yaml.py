@@ -31,6 +31,7 @@ for node in hostnames_yaml['config']['nodes']:
     else:
         os.popen(sshcmd + "\'hostnamectl set-hostname %s --static \'" % hostname)
 
+    saltrepo = str(os.environ['saltFpath'])
     os.popen(sshcmd + "\' yum -y install %s \'" % saltrepo)
     os.popen(sshcmd + "\' yum remove -y salt salt-minion \'")
     os.popen(sshcmd + "\' rm -fR /var/log/salt* /var/cache/salt* /var/run/salt* /etc/salt* \'")
