@@ -5,7 +5,7 @@ export saltFpath="$saltrepo""/redhat/salt-repo-latest-2.el7.noarch.rpm"
 #install salt-master
 yum -y install "$saltFpath"
 yum -y install salt-master
-systemct start salt-master
+systemctl start salt-master
 systemctl enable salt-master
 
 #
