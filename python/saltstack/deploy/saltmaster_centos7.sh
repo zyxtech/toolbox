@@ -18,6 +18,7 @@ pip install -U pip setuptools wheel
 pip install ruamel.yaml
 
 #install nginx for share files
+cp nginx.repo /etc/yum.repos.d/
 yum -y install nginx
 systemctl start nginx
 systemctl enable nginx
