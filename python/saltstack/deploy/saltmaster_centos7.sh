@@ -9,7 +9,8 @@ systemct start salt-master
 systemctl enable salt-master
 
 #
-if [ ! type -a pip ];then
+type -a pip >> /dev/null 2>&1
+if [ $? == 1 ];then
 curl https://bootstrap.pypa.io/get-pip.py|python
 yum -y install sshpass
 fi
